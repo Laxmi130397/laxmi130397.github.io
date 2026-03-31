@@ -3,135 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laxmi Dubey | SEO Analyst Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>Laxmi Dubey | SEO Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #050505;
-            --accent: #00ffcc; /* Neon SEO Accent */
-            --card: #121212;
-            --text: #ffffff;
-            --dim: #a0a0a0;
+            --bg-color: #0a0a0a;
+            --text-color: #ffffff;
+            --accent: #f0f0f0;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            background: var(--bg); 
-            color: var(--text); 
+            background-color: var(--bg-color); 
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
             overflow-x: hidden;
         }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        /* HERO SECTION - EXACT BEHANCE MATCH */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            text-align: center;
+            padding: 20px;
+        }
 
-        /* HERO SECTION */
-        .hero { text-align: center; padding: 100px 0; animation: fadeIn 1.2s ease; }
-        .hero h1 { font-size: 4.5rem; letter-spacing: -2px; line-height: 1; margin-bottom: 20px; }
-        .hero h1 span { color: var(--accent); }
-        .hero p { font-size: 1.2rem; color: var(--dim); max-width: 600px; margin: 0 auto; }
+        .role-badge {
+            font-size: 1.2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: -20px;
+            z-index: 2;
+        }
 
-        /* BENTO GRID LAYOUT */
-        .bento-grid {
+        .big-title {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 15vw; /* Extremely large text */
+            line-height: 0.8;
+            text-transform: uppercase;
+            color: var(--accent);
+            opacity: 0.9;
+            user-select: none;
+        }
+
+        /* Portrait Overlay Mockup */
+        .portrait-container {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .portrait-placeholder {
+            width: 400px;
+            height: 500px;
+            background: linear-gradient(to top, #0a0a0a, transparent), url('your-photo.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: grayscale(100%);
+        }
+
+        /* INFO SECTION */
+        .content-section {
+            padding: 100px 10%;
+            background: #fff;
+            color: #000;
+        }
+
+        .grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: auto;
-            gap: 20px;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
             margin-top: 50px;
         }
 
-        .bento-item {
-            background: var(--card);
-            border: 1px solid #222;
-            border-radius: 24px;
-            padding: 30px;
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .bento-item:hover { border-color: var(--accent); transform: translateY(-10px); }
-
-        /* GRID SIZING */
-        .large { grid-column: span 2; grid-row: span 2; background: linear-gradient(145deg, #121212, #1a1a1a); }
-        .tall { grid-row: span 2; }
-        .wide { grid-column: span 2; }
-
-        /* CONTENT STYLES */
-        .label { font-size: 0.75rem; text-transform: uppercase; color: var(--accent); font-weight: 800; margin-bottom: 10px; display: block; }
-        h3 { font-size: 1.5rem; margin-bottom: 15px; }
-        .stat { font-size: 3rem; font-weight: 800; color: var(--accent); }
-        ul { list-style: none; color: var(--dim); font-size: 0.95rem; }
-        li { margin-bottom: 8px; }
-
-        /* ANIMATIONS */
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-
-        @media (max-width: 900px) {
-            .bento-grid { grid-template-columns: repeat(2, 1fr); }
-            .hero h1 { font-size: 3rem; }
-        }
+        h2 { font-size: 3rem; text-transform: uppercase; margin-bottom: 20px; }
+        .project-card { border-top: 2px solid #000; padding-top: 20px; }
+        .project-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
-<div class="container">
     <section class="hero">
-        <h1>SEO <span>Analyst</span> Portfolio</h1>
-        <p>Laxmi Dubey — Helping brands dominate search rankings through technical audits, keyword strategy, and data-driven ROI.</p>
+        <p class="role-badge">SEO ANALYST (3 YEARS EXP)</p>
+        <h1 class="big-title">PORTFOLIO</h1>
+        
+        <div class="portrait-container">
+            <div class="portrait-placeholder" style="background-image: url('https://via.placeholder.com/400x500');"></div>
+        </div>
     </section>
 
-    <div class="bento-grid">
-        <div class="bento-item large">
-            <div>
-                <span class="label">Current Focus</span>
-                <h3>SEO Analyst @ SB Websolutions</h3>
-                <ul>
-                    <li>In-depth keyword research for maximum visibility.</li>
-                    <li>Technical SEO audits & site speed optimization.</li>
-                    <li>Competitor analysis to strengthen domain authority.</li>
-                </ul>
+    <section class="content-section">
+        <h2>Selected Work</h2>
+        <div class="grid">
+            <div class="project-card">
+                <p><strong>01 / SB WEBSOLUTIONS</strong> [cite: 8]</p>
+                <h3>Technical SEO & Audits</h3>
+                <p>Improving search visibility and mobile responsiveness for organic traffic growth[cite: 10, 12].</p>
             </div>
-            <div class="stat">3+ Years</div>
+            <div class="project-card">
+                <p><strong>02 / MAHATTA ART</strong> [cite: 16]</p>
+                <h3>Digital Performance</h3>
+                <p>Managed Schema markup, email marketing, and WhatsApp campaigns[cite: 19, 24].</p>
+            </div>
+            <div class="project-card">
+                <p><strong>03 / HOSPITALITY</strong> [cite: 45, 47]</p>
+                <h3>Golden Tree & Osian Resorts</h3>
+                <p>End-to-end SEO strategies and content marketing in the hospitality sector[cite: 45, 47].</p>
+            </div>
+            <div class="project-card">
+                <p><strong>04 / REAL ESTATE</strong> [cite: 49]</p>
+                <h3>Branwal Builders</h3>
+                <p>Focusing on lead generation through targeted on-page and blog strategies[cite: 49].</p>
+            </div>
         </div>
 
-        <div class="bento-item tall">
-            <span class="label">Expertise</span>
-            <h3>Core Tools</h3>
-            <ul>
-                <li>Google Search Console</li>
-                <li>SEMrush & Ahrefs</li>
-                <li>Google Analytics</li>
-                <li>Moz & WordPress</li>
-                <li>On-Page / Off-Page</li>
-            </ul>
-        </div>
-
-        <div class="bento-item wide">
-            <span class="label">Case Study</span>
-            <h3>Golden Tree Hotel</h3>
-            <p style="color: var(--dim);">Executed end-to-end SEO strategies including on-page/off-page optimization to improve organic traffic.</p>
-        </div>
-
-        <div class="bento-item">
-            <span class="label">Marketing</span>
-            <h3>Multi-Channel</h3>
-            <p style="color: var(--dim); font-size: 0.9rem;">WhatsApp, Email, & Social Media campaigns for brand growth.</p>
-        </div>
-
-        <div class="bento-item">
-            <span class="label">Project</span>
-            <h3>Fiem Industries</h3>
-            <p style="color: var(--dim); font-size: 0.9rem;">Technical SEO audits to enhance search rankings.</p>
-        </div>
-
-        <div class="bento-item wide">
-            <span class="label">Education</span>
-            <h3>Digital Marketing Cert. & B.Com</h3>
-            <p style="color: var(--dim);">Delhi Institute of Digital Marketing (2022) | DU (2019).</p>
-        </div>
-    </div>
-</div>
+        <h2 style="margin-top: 100px;">Core Toolkit</h2>
+        <p style="font-size: 1.5rem; line-height: 2;">
+            Google Search Console [cite: 33] • SEMrush [cite: 33] • Ahrefs [cite: 33] • Moz [cite: 33] • 
+            Keyword Research [cite: 34] • Link Building [cite: 35] • Technical Audits [cite: 36]
+        </p>
+    </section>
 
 </body>
 </html>
