@@ -68,40 +68,30 @@
             margin-bottom: 40px;
         }
 
-        /* TOOLS SECTION (EXACT MATCH TO IMAGE) */
-        .tools-grid {
+        /* TOOLS SECTION (VISUAL ICON GRID) */
+        .tools-visual-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 40px;
             margin: 60px 0;
+            align-items: center;
         }
-        .tool-box {
-            background: var(--card-bg);
-            padding: 45px 20px;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            text-align: center;
-            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        .tool-icon-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.3s ease;
         }
-        .tool-box:hover {
-            border-color: #fff;
-            transform: translateY(-10px);
-        }
-        .tool-icon {
-            font-size: 2.2rem;
+        .tool-icon-box:hover { transform: scale(1.2); }
+        .tool-icon-box i { font-size: 3.5rem; }
+        .tool-icon-box span {
+            font-weight: 700;
+            font-size: 0.8rem;
             color: #fff;
-            margin-bottom: 25px;
-            display: block;
-        }
-        .tool-box strong {
-            display: block;
-            font-size: 1.1rem;
-            font-weight: 900;
-            margin-bottom: 8px;
-        }
-        .tool-box p {
-            font-size: 0.85rem;
-            color: var(--dim);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
         }
 
         /* EXPERIENCE SECTION */
@@ -143,8 +133,9 @@
 
         hr { border: 0; border-top: 1px solid var(--border); margin: 80px 0; }
 
-        @media (max-width: 850px) {
+        @media (max-width: 900px) {
             .exp-card, .contact-grid { grid-template-columns: 1fr; flex-direction: column; }
+            .tools-visual-grid { grid-template-columns: repeat(3, 1fr); gap: 30px; }
             .section-header { font-size: 4rem; }
             .contact-value { font-size: 1.5rem; }
         }
@@ -154,18 +145,18 @@
 
 <div class="container">
     <section class="hero">
-        <p class="hero-badge">3+ Years Professional Exp</p>
+        <p class="hero-badge">Professional SEO Analyst</p>
         <h1 class="big-title">Portfolio</h1>
         <p style="color: var(--dim); margin-top: 30px; font-size: 1.2rem; max-width: 700px;">
-            Laxmi Dubey — Results-driven SEO Analyst helping brands scale organic visibility through data-driven technical audits and strategy.
+            Laxmi Dubey — Helping brands dominate search visibility through technical audits, keyword strategy, and data-driven ROI analysis.
         </p>
     </section>
 
     <section id="about">
         <h2 class="section-header">About Me</h2>
         <p class="about-text">
-            I specialize in keyword research, on-page and off-page optimization, and full-scale technical SEO audits[cite: 4, 34, 36]. 
-            I use professional tools like SEMrush and Ahrefs to measure performance, analyze competitors, and drive maximum business ROI[cite: 5, 14, 15].
+            Results-driven SEO Analyst with expertise in keyword research, on-page & off-page optimization, and technical SEO strategy. [cite: 4]
+            I specialize in conducting in-depth audits and competitor analysis using advanced industry tools to drive business growth. [cite: 5, 13]
         </p>
     </section>
 
@@ -173,32 +164,17 @@
 
     <section id="tools">
         <h2 class="section-header">Tools</h2>
-        <div class="tools-grid">
-            <div class="tool-box">
-                <i class="fa-solid fa-chart-line tool-icon"></i>
-                <strong>SEMRush</strong>
-                <p>Performance Tracking</p>
-            </div>
-            <div class="tool-box">
-                <i class="fa-solid fa-link tool-icon"></i>
-                <strong>Ahrefs</strong>
-                <p>Backlink Analysis</p>
-            </div>
-            <div class="tool-box">
-                <i class="fa-solid fa-magnifying-glass-chart tool-icon"></i>
-                <strong>GSC</strong>
-                <p>Crawlability & Data</p>
-            </div>
-            <div class="tool-box">
-                <i class="fa-solid fa-chart-pie tool-icon"></i>
-                <strong>Analytics</strong>
-                <p>User Behavior & ROI</p>
-            </div>
-            <div class="tool-box">
-                <i class="fa-brands fa-wordpress tool-icon"></i>
-                <strong>WordPress</strong>
-                <p>CMS Optimization</p>
-            </div>
+        <div class="tools-visual-grid">
+            <div class="tool-icon-box"><i class="fa-brands fa-meta" style="color: #0668E1;"></i><span>Meta Ads</span></div>
+            <div class="tool-icon-box"><i class="fa-brands fa-google" style="color: #4285F4;"></i><span>Google Ads</span></div>
+            <div class="tool-icon-box"><i class="fa-solid fa-chart-simple" style="color: #F9AB00;"></i><span>Analytics</span></div>
+            <div class="tool-icon-box"><i class="fa-solid fa-tag" style="color: #4285F4;"></i><span>GTM</span></div>
+            <div class="tool-icon-box"><i class="fa-solid fa-bag-shopping" style="color: #4285F4;"></i><span>Merchant</span></div>
+            <div class="tool-icon-box"><i class="fa-solid fa-screwdriver-wrench" style="color: #94a3b8;"></i><span>Search Console</span></div>
+            <div class="tool-icon-box"><i class="fa-solid fa-fire-flame-curved" style="color: #FF6422;"></i><span>SEMrush</span></div>
+            <div class="tool-icon-box"><i class="fa-brands fa-wordpress" style="color: #21759b;"></i><span>WordPress</span></div>
+            <div class="tool-icon-box"><i class="fa-solid fa-palette" style="color: #00C4CC;"></i><span>Canva</span></div>
+            <div class="tool-icon-box"><i class="fa-solid fa-link" style="color: #FF8C00;"></i><span>Ahrefs</span></div>
         </div>
     </section>
 
@@ -212,12 +188,12 @@
                 <p class="exp-sub">SB Websolutions</p>
                 <h3>SEO Analyst</h3>
                 <ul class="exp-list">
-                    <li>Implemented strategies for higher organic traffic growth[cite: 11].</li>
-                    <li>Enhanced technical elements including site speed and responsiveness[cite: 12].</li>
-                    <li>Managed link-building and competitor analysis via Ahrefs[cite: 13, 14].</li>
+                    <li>Conducted in-depth keyword research to optimize website content and improve visibility. [cite: 10]</li>
+                    <li>Implemented on-page and off-page strategies for organic traffic growth. [cite: 11]</li>
+                    <li>Performed technical SEO audits to enhance site speed and mobile responsiveness. [cite: 12]</li>
                 </ul>
             </div>
-            <p class="exp-sub">2024 — Present</p>
+            <p class="exp-sub">June 2024 — Present [cite: 9]</p>
         </div>
 
         <div class="exp-card">
@@ -225,12 +201,12 @@
                 <p class="exp-sub">MAHATTA ART</p>
                 <h3>SEO Specialist</h3>
                 <ul class="exp-list">
-                    <li>Optimized meta tags, schema markup, and internal linking[cite: 19, 20].</li>
-                    <li>Managed digital visibility via WhatsApp and Email marketing[cite: 24].</li>
-                    <li>Collaborated with design teams for SEO best practices[cite: 23].</li>
+                    <li>Implemented schema markup, internal linking, and meta tag optimization. [cite: 19, 20]</li>
+                    <li>Executed WhatsApp campaigns and email marketing initiatives for brand visibility. [cite: 24]</li>
+                    <li>Collaborated with design and development teams to ensure SEO best practices. [cite: 23]</li>
                 </ul>
             </div>
-            <p class="exp-sub">2023</p>
+            <p class="exp-sub">Oct 2023 [cite: 17]</p>
         </div>
     </section>
 
@@ -241,15 +217,15 @@
         <div class="contact-grid">
             <div>
                 <p class="contact-label">Phone Number</p>
-                <p class="contact-value">+91 8826416152</p>
+                <p class="contact-value">+91 8826416152 [cite: 2]</p>
             </div>
             <div>
                 <p class="contact-label">Email Address</p>
-                <p class="contact-value">laxmidubey13031997@gmail.com</p>
+                <p class="contact-value">laxmidubey13031997@gmail.com [cite: 2]</p>
             </div>
         </div>
         <p style="margin-top: 100px; opacity: 0.3; font-size: 0.8rem; text-transform: uppercase;">
-            © 2026 Laxmi Dubey • DMRC Staff Quarters, Delhi[cite: 2].
+            © 2026 Laxmi Dubey • SEO Professional • Delhi, India.
         </p>
     </section>
 </div>
