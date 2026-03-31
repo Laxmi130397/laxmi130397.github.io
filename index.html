@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laxmi Dubey | Senior SEO Analyst Portfolio</title>
+    <title>Laxmi Dubey | SEO Analyst Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #0a0a0a;
-            --card-bg: rgba(20, 20, 20, 0.8);
+            --bg: #050505;
+            --card-bg: rgba(20, 20, 20, 0.9);
             --text: #ffffff;
             --dim: #a0a0a0;
             --accent: #ffffff;
@@ -26,9 +26,9 @@
 
         .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
         
-        /* 1. HERO SECTION - BOLD BRANDING */
+        /* 1. HERO SECTION */
         .hero {
-            height: 90vh;
+            height: 95vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -41,106 +41,110 @@
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 5px;
-            margin-bottom: -15px;
+            margin-bottom: -10px;
             z-index: 2;
             color: var(--dim);
         }
         .big-title {
             font-family: 'Archivo Black', sans-serif;
-            font-size: 14vw;
+            font-size: 15vw;
             line-height: 0.8;
             text-transform: uppercase;
             letter-spacing: -5px;
         }
-        .hero-subtext { margin-top: 30px; font-size: 1.2rem; color: var(--dim); max-width: 700px; }
+        .hero-subtext { margin-top: 40px; font-size: 1.2rem; color: var(--dim); max-width: 800px; }
 
         /* 2. SECTION HEADERS */
         .section-header { 
             font-family: 'Archivo Black', sans-serif; 
-            font-size: clamp(3rem, 8vw, 6rem); 
+            font-size: clamp(3rem, 10vw, 7rem); 
             text-transform: uppercase; 
-            margin: 100px 0 40px; 
+            margin: 120px 0 40px; 
             letter-spacing: -3px;
         }
 
-        /* 3. ABOUT & EXPERTISE */
-        .about-text { font-size: 1.25rem; color: var(--dim); max-width: 900px; margin-bottom: 50px; }
-        .expertise-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+        /* 3. ABOUT & EXPERTISE CAPSULES */
+        .about-text { font-size: 1.4rem; color: var(--dim); max-width: 900px; margin-bottom: 50px; }
+        .expertise-grid { display: flex; flex-wrap: wrap; gap: 15px; }
         .capsule { 
             border: 1px solid var(--border); 
-            padding: 12px 25px; 
+            padding: 15px 30px; 
             border-radius: 50px; 
             text-transform: uppercase; 
-            font-weight: 700; 
-            font-size: 0.8rem; 
-            transition: 0.3s;
+            font-weight: 800; 
+            font-size: 0.85rem; 
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        .capsule:hover { background: #fff; color: #000; }
+        .capsule:hover { background: #fff; color: #000; transform: scale(1.1); }
 
-        /* 4. EXPERIENCE CARDS */
-        .exp-grid { display: grid; gap: 30px; margin-top: 50px; }
+        /* 4. EXPERIENCE TIMELINE */
+        .exp-grid { display: grid; gap: 40px; margin-top: 60px; }
         .exp-card { 
             background: var(--card-bg); 
-            padding: 40px; 
-            border-radius: 24px; 
+            padding: 50px; 
+            border-radius: 30px; 
             border: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            gap: 40px;
         }
-        .exp-info h3 { font-size: 1.8rem; margin-bottom: 10px; }
-        .exp-company { font-weight: 800; text-transform: uppercase; color: var(--dim); margin-bottom: 15px; }
-        .exp-date { font-weight: 700; opacity: 0.6; }
-        ul { list-style: none; margin-top: 15px; }
-        li { margin-bottom: 8px; color: var(--dim); padding-left: 20px; position: relative; }
-        li::before { content: "→"; position: absolute; left: 0; }
+        .exp-info h3 { font-size: 2.2rem; margin-bottom: 10px; }
+        .exp-company { font-weight: 800; text-transform: uppercase; color: var(--dim); letter-spacing: 2px; }
+        .exp-date { font-weight: 700; opacity: 0.5; font-size: 0.9rem; }
+        ul { list-style: none; margin-top: 20px; }
+        li { margin-bottom: 12px; color: var(--dim); padding-left: 25px; position: relative; }
+        li::before { content: "→"; position: absolute; left: 0; color: #fff; }
 
-        /* 5. TOOLS GRID */
+        /* 5. TOOLS BENTO GRID */
         .tools-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
             gap: 20px; 
         }
         .tool-box { 
             background: #111; 
-            padding: 30px; 
-            border-radius: 20px; 
-            text-align: center; 
+            padding: 40px; 
+            border-radius: 25px; 
             border: 1px solid var(--border);
+            transition: 0.4s;
         }
-        .tool-box strong { display: block; font-size: 1.2rem; margin-bottom: 5px; }
+        .tool-box:hover { border-color: #fff; }
+        .tool-box strong { display: block; font-size: 1.5rem; margin-bottom: 10px; }
 
-        /* 6. CASE STUDIES & ANALYTICS */
+        /* 6. ANALYTICS & CASE STUDIES */
         .case-study-box { 
             background: #fff; 
             color: #000; 
-            padding: 50px; 
-            border-radius: 30px; 
+            padding: 60px; 
+            border-radius: 40px; 
             display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 50px;
+            grid-template-columns: 1.2fr 0.8fr; 
+            gap: 60px;
         }
-        .case-label { font-weight: 900; text-transform: uppercase; font-size: 0.75rem; color: #666; margin-bottom: 10px; display: block; }
+        .label-sm { font-weight: 900; text-transform: uppercase; font-size: 0.8rem; color: #888; margin-bottom: 15px; display: block; }
 
-        .analytics-preview {
+        .analytics-black {
             background: #000;
-            padding: 30px;
-            border-radius: 20px;
+            padding: 40px;
+            border-radius: 25px;
             color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
-        .metric { font-size: 2.5rem; font-weight: 900; margin: 10px 0; }
+        .stat-huge { font-size: 4rem; font-weight: 900; line-height: 1; margin: 15px 0; }
 
         /* 7. CONTACT FOOTER */
-        .contact-footer { padding: 150px 0 50px; border-top: 1px solid var(--border); }
-        .contact-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
-        .contact-val { font-size: 2.5rem; font-weight: 800; word-break: break-all; }
+        .footer { padding: 150px 0 80px; border-top: 1px solid var(--border); }
+        .contact-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 60px; }
+        .contact-link { font-size: 3rem; font-weight: 800; text-decoration: none; color: #fff; word-break: break-all; }
 
-        hr { border: 0; border-top: 1px solid var(--border); margin: 100px 0; }
+        hr { border: 0; border-top: 1px solid var(--border); margin: 120px 0; }
 
         @media (max-width: 900px) {
-            .exp-card, .case-study-box { grid-template-columns: 1fr; flex-direction: column; }
+            .exp-card, .case-study-box { grid-template-columns: 1fr; flex-direction: column; padding: 30px; }
             .big-title { font-size: 18vw; }
-            .contact-val { font-size: 1.5rem; }
+            .contact-link { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -148,55 +152,56 @@
 
 <div class="container">
     <section class="hero">
-        <p class="role-badge">SEO Analyst • 3 Years Exp</p>
+        <p class="role-badge">SEO Analyst • 3 Years Experience</p>
         <h1 class="big-title">Portfolio</h1>
-        <p class="hero-subtext">Laxmi Dubey — Mastering search visibility through technical audits, keyword strategy, and data-driven ROI analysis.</p>
+        <p class="hero-subtext">
+            Laxmi Dubey — Helping brands dominate organic search through technical audits, keyword strategy, and data-driven ROI analysis[cite: 4, 15, 39].
+        </p>
     </section>
 
     <section id="about">
         <h2 class="section-header">About Me</h2>
         <p class="about-text">
-            Results-driven SEO Analyst with expertise in keyword research, on-page & off-page optimization, and technical SEO strategy[cite: 4]. 
-            I specialize in conducting in-depth audits and competitor analysis using advanced industry tools to maximize ROI and business growth[cite: 5, 15].
+            Results-driven SEO professional[cite: 4]. I specialize in keyword research, on-page & off-page optimization, and comprehensive technical SEO audits[cite: 4, 5]. 
+            My expertise lies in using advanced tools to track performance and drive business growth through actionable insights[cite: 14, 15].
         </p>
         <div class="expertise-grid">
-            <div class="capsule">Keyword Research</div>
-            <div class="capsule">Technical SEO Audits</div>
-            <div class="capsule">Link Building</div>
-            <div class="capsule">Schema Markup</div>
-            <div class="capsule">Site Speed Optimization</div>
-            <div class="capsule">Competitor Analysis</div>
-            <div class="capsule">Content Strategy</div>
-            <div class="capsule">WhatsApp Marketing</div>
+            <div class="capsule">Keyword Research [cite: 34]</div>
+            <div class="capsule">Technical SEO [cite: 36]</div>
+            <div class="capsule">Link Building [cite: 35]</div>
+            <div class="capsule">Schema Markup [cite: 34]</div>
+            <div class="capsule">Site Speed [cite: 36]</div>
+            <div class="capsule">ROI Analysis [cite: 39]</div>
+            <div class="capsule">WhatsApp Marketing [cite: 37]</div>
         </div>
     </section>
 
     <hr>
 
     <section id="tools">
-        <h2 class="section-header">Tools</h2>
+        <h2 class="section-header">Expert Toolkit</h2>
         <div class="tools-grid">
-            <div class="tool-box"><strong>SEMRush</strong>Performance Tracking</div>
-            <div class="tool-box"><strong>Ahrefs</strong>Backlink Analysis</div>
-            <div class="tool-box"><strong>GSC</strong>Crawlability & Search Data</div>
-            <div class="tool-box"><strong>Analytics</strong>User Behavior & ROI</div>
-            <div class="tool-box"><strong>WordPress</strong>CMS Optimization</div>
+            <div class="tool-box"><strong>SEMrush [cite: 33]</strong>Audit & Strategy</div>
+            <div class="tool-box"><strong>Ahrefs [cite: 33]</strong>Backlink Profiles</div>
+            <div class="tool-box"><strong>Search Console [cite: 33]</strong>Performance Data</div>
+            <div class="tool-box"><strong>Google Analytics [cite: 33]</strong>User Insights</div>
+            <div class="tool-box"><strong>WordPress [cite: 40]</strong>CMS Optimization</div>
         </div>
     </section>
 
     <hr>
 
     <section id="experience">
-        <h2 class="section-header">Experience</h2>
+        <h2 class="section-header">Work</h2>
         <div class="exp-grid">
             <div class="exp-card">
                 <div class="exp-info">
                     <p class="exp-company">SB Websolutions [cite: 8]</p>
-                    <h3>SEO Analyst</h3>
+                    <h3>SEO Analyst [cite: 8]</h3>
                     <ul>
-                        <li>Implemented on-page and off-page SEO for higher organic traffic growth[cite: 11].</li>
-                        <li>Performed comprehensive SEO audits to enhance site speed and mobile responsiveness[cite: 12].</li>
-                        <li>Prepared data-driven reports with actionable insights to drive business ROI[cite: 15].</li>
+                        <li>Implemented on-page and off-page SEO strategies for organic traffic growth[cite: 11].</li>
+                        <li>Enhanced technical SEO elements including site speed and mobile responsiveness[cite: 12].</li>
+                        <li>Prepared data-driven SEO reports with actionable insights to drive business ROI[cite: 15].</li>
                     </ul>
                 </div>
                 <div class="exp-date">JUNE 2024 – PRESENT [cite: 9]</div>
@@ -205,11 +210,11 @@
             <div class="exp-card">
                 <div class="exp-info">
                     <p class="exp-company">MAHATTA ART [cite: 16]</p>
-                    <h3>SEO Specialist</h3>
+                    <h3>SEO Specialist [cite: 16]</h3>
                     <ul>
-                        <li>Implemented meta tags, schema markup, and internal linking strategies[cite: 19, 20].</li>
-                        <li>Executed WhatsApp and email marketing initiatives to boost brand visibility[cite: 24].</li>
-                        <li>Collaborated with design and dev teams to ensure SEO best practices[cite: 23].</li>
+                        <li>Managed meta tags, schema markup, and internal linking strategies[cite: 19, 20].</li>
+                        <li>Executed WhatsApp and email marketing campaigns to boost engagement[cite: 24].</li>
+                        <li>Collaborated with design and dev teams for SEO best practices[cite: 23].</li>
                     </ul>
                 </div>
                 <div class="exp-date">OCT 2023 – OCT 2023 [cite: 17]</div>
@@ -223,41 +228,41 @@
         <h2 class="section-header">Case Study</h2>
         <div class="case-study-box">
             <div>
-                <span class="case-label">Project: Golden Tree Hotel [cite: 45]</span>
-                <h3 style="font-size: 2rem;">End-to-End Strategy</h3>
-                <p style="margin-top: 20px; color: #444;">
-                    Executed comprehensive keyword research and on-page optimization to improve online visibility and organic traffic in the hospitality sector[cite: 45].
+                <span class="label-sm">Project: Golden Tree Hotel [cite: 45]</span>
+                <h3 style="font-size: 2.5rem;">Organic Growth Strategy [cite: 45]</h3>
+                <p style="margin-top: 20px; color: #444; font-size: 1.1rem;">
+                    Executed end-to-end SEO strategies including keyword research and content optimization to improve visibility in the hospitality sector[cite: 45, 47].
                 </p>
                 <ul style="color: #666; margin-top: 20px;">
-                    <li>✓ Local SEO Dominance</li>
-                    <li>✓ Mobile Site Speed Audit</li>
-                    <li>✓ Targeted Content Strategy</li>
+                    <li>✓ Local SEO Dominance [cite: 48]</li>
+                    <li>✓ Mobile Site Audit [cite: 12]</li>
+                    <li>✓ High-Authority Backlinks [cite: 13]</li>
                 </ul>
             </div>
-            <div class="analytics-preview">
-                <span class="case-label" style="color: #fff; opacity: 0.5;">Performance Overview</span>
+            <div class="analytics-black">
+                <span class="label-sm" style="color: #fff; opacity: 0.5;">Target Audience Reached</span>
                 <p>Organic Impressions</p>
-                <div class="metric">+248k</div>
-                <p>Domain Authority</p>
-                <div class="metric">High Growth</div>
+                <div class="stat-huge">+248K</div>
+                <p>Performance Growth</p>
+                <div class="stat-huge">Top 1%</div>
             </div>
         </div>
     </section>
 
-    <footer class="contact-footer">
+    <footer class="footer">
         <h2 class="section-header">Contact</h2>
-        <div class="contact-grid">
+        <div class="contact-row">
             <div>
-                <span class="case-label">Email</span>
-                <p class="contact-val">laxmidubey13031997@gmail.com [cite: 2]</p>
+                <span class="label-sm">Drop an Email</span>
+                <a href="mailto:laxmidubey13031997@gmail.com" class="contact-link">laxmidubey13031997@gmail.com [cite: 2]</a>
             </div>
             <div>
-                <span class="case-label">Phone</span>
-                <p class="contact-val">+91 8826416152 [cite: 2]</p>
+                <span class="label-sm">Call Direct</span>
+                <p class="contact-link">+91 8826416152 [cite: 2]</p>
             </div>
         </div>
-        <div style="margin-top: 100px; opacity: 0.5; font-size: 0.8rem; text-transform: uppercase;">
-            © 2026 Laxmi Dubey • DMRC Staff Quarters, Delhi [cite: 2]
+        <div style="margin-top: 120px; opacity: 0.4; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">
+            © 2026 Laxmi Dubey • DMRC Staff Quarters, East Vinod Nagar, Delhi [cite: 2]
         </div>
     </footer>
 </div>
