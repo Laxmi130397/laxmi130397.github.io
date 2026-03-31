@@ -1,34 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laxmi Dubey | SEO Analyst Portfolio</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<section class="hero">
+        <p class="hero-badge">Professional SEO Analyst [cite: 4, 8]</p>
+        <h1 class="big-title">Portfolio</h1>
+        
+        <div class="portrait-overlay">
+            <img src="20260221_151410.jpg" alt="Laxmi Dubey">
+        </div>
+
+        <p class="hero-description">
+            Laxmi Dubey — Helping brands dominate search visibility through technical audits, keyword strategy, and data-driven ROI analysis. [cite: 1, 4, 15]
+        </p>
+    </section>
 
     <style>
-        :root {
-            --bg: #000000;
-            --card-bg: #0a0a0a;
-            --text: #ffffff;
-            --dim: #a0a0a0;
-            --border: #222222;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            background-color: var(--bg); 
-            color: var(--text); 
-            font-family: 'Inter', sans-serif; 
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
-
-        /* HERO SECTION WITH IMAGE OVERLAY */
+        /* Updated Styles for better image visibility */
         .hero {
             height: 100vh;
             display: flex;
@@ -36,218 +20,47 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            text-align: center;
+            background-color: #000;
             overflow: hidden;
+            text-align: center;
         }
-        .hero-badge {
-            font-size: 1.2rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            color: var(--dim);
-            margin-bottom: 10px;
-            z-index: 3;
-        }
-        .big-title {
-            font-family: 'Archivo Black', sans-serif;
-            font-size: 15vw;
-            line-height: 0.85;
-            text-transform: uppercase;
-            z-index: 1;
-            opacity: 0.8;
-        }
+
         .portrait-overlay {
             position: absolute;
             bottom: 0;
             width: 100%;
-            height: 80%;
+            height: 85%;
             display: flex;
             justify-content: center;
             z-index: 2;
-            pointer-events: none;
         }
+
         .portrait-overlay img {
             height: 100%;
+            width: auto;
             object-fit: contain;
-            filter: grayscale(20%) contrast(110%);
-            mask-image: linear-gradient(to top, transparent 5%, black 40%);
+            /* Ensures the image doesn't look washed out against the black */
+            filter: contrast(1.1); 
+            /* Soft fade at the bottom to match Behance style */
+            -webkit-mask-image: linear-gradient(to top, transparent 0%, black 30%);
+            mask-image: linear-gradient(to top, transparent 0%, black 30%);
         }
 
-        /* SECTION HEADERS */
-        .section-header {
+        .hero-description {
+            color: #a0a0a0; 
+            margin-top: 20px; 
+            font-size: 1.2rem; 
+            max-width: 800px; 
+            z-index: 3; 
+            padding: 0 20px;
+        }
+
+        .big-title {
             font-family: 'Archivo Black', sans-serif;
-            font-size: clamp(3rem, 10vw, 6rem);
+            font-size: 15vw;
+            line-height: 0.8;
             text-transform: uppercase;
-            margin-bottom: 50px;
-        }
-
-        /* TOOLS SECTION (VISUAL ICON GRID) */
-        .tools-visual-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 40px;
-            margin: 60px 0;
-            align-items: center;
-        }
-        .tool-icon-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            transition: transform 0.3s ease;
-        }
-        .tool-icon-box:hover { transform: scale(1.2); }
-        .tool-icon-box i { font-size: 3.5rem; }
-        .tool-icon-box span {
-            font-weight: 700;
-            font-size: 0.8rem;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-align: center;
-        }
-
-        /* EXPERIENCE CARDS */
-        .exp-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            padding: 50px;
-            border-radius: 30px;
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 30px;
-        }
-        .exp-main h3 { font-size: 2.5rem; margin-bottom: 5px; }
-        .exp-sub { font-weight: 900; text-transform: uppercase; color: var(--dim); letter-spacing: 2px; }
-        .exp-list { list-style: none; margin-top: 25px; }
-        .exp-list li { 
-            margin-bottom: 12px; 
-            color: var(--dim); 
-            padding-left: 25px; 
-            position: relative; 
-            font-size: 1.1rem;
-        }
-        .exp-list li::before { content: "→"; position: absolute; left: 0; color: #fff; }
-
-        /* CONTACT SECTION */
-        .contact-footer {
-            padding: 120px 0;
-            border-top: 1px solid var(--border);
-        }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-        }
-        .contact-label { font-weight: 900; text-transform: uppercase; color: var(--dim); font-size: 0.9rem; }
-        .contact-value { font-size: 2.5rem; font-weight: 900; margin-top: 10px; word-break: break-all; }
-
-        hr { border: 0; border-top: 1px solid var(--border); margin: 80px 0; }
-
-        @media (max-width: 900px) {
-            .exp-card, .contact-grid { grid-template-columns: 1fr; flex-direction: column; }
-            .tools-visual-grid { grid-template-columns: repeat(3, 1fr); gap: 30px; }
-            .section-header { font-size: 4rem; }
-            .contact-value { font-size: 1.5rem; }
-            .big-title { font-size: 18vw; }
+            color: #333; /* Darker grey so it sits 'behind' the photo */
+            z-index: 1;
         }
     </style>
-</head>
-<body>
-
-<div class="container">
-    <section class="hero">
-        <p class="hero-badge">Professional SEO Analyst</p>
-        <h1 class="big-title">Portfolio</h1>
-        
-        <div class="portrait-overlay">
-            <img src="20260221_151410.jpg" alt="Laxmi Dubey">
-        </div>
-
-        <p style="color: var(--dim); margin-top: 30px; font-size: 1.2rem; max-width: 700px; z-index: 3; background: rgba(0,0,0,0.5); padding: 10px; border-radius: 10px;">
-            Laxmi Dubey — Helping brands dominate search visibility through technical audits, keyword strategy, and data-driven ROI analysis.
-        </p>
-    </section>
-
-    <section id="about">
-        <h2 class="section-header">About Me</h2>
-        <p class="about-text">
-            Results-driven SEO Analyst with expertise in keyword research, on-page & off-page optimization, and technical SEO strategy[cite: 4].
-            I specialize in conducting in-depth audits and competitor analysis using advanced industry tools to drive business growth[cite: 5, 13].
-        </p>
-    </section>
-
-    <hr>
-
-    <section id="tools">
-        <h2 class="section-header">Tools</h2>
-        <div class="tools-visual-grid">
-            <div class="tool-icon-box"><i class="fa-brands fa-meta" style="color: #0668E1;"></i><span>Meta Ads</span></div>
-            <div class="tool-icon-box"><i class="fa-brands fa-google" style="color: #4285F4;"></i><span>Google Ads</span></div>
-            <div class="tool-icon-box"><i class="fa-solid fa-chart-simple" style="color: #F9AB00;"></i><span>Analytics</span></div>
-            <div class="tool-icon-box"><i class="fa-solid fa-tag" style="color: #4285F4;"></i><span>GTM</span></div>
-            <div class="tool-icon-box"><i class="fa-solid fa-bag-shopping" style="color: #4285F4;"></i><span>Merchant</span></div>
-            <div class="tool-icon-box"><i class="fa-solid fa-screwdriver-wrench" style="color: #94a3b8;"></i><span>Search Console</span></div>
-            <div class="tool-icon-box"><i class="fa-solid fa-fire-flame-curved" style="color: #FF6422;"></i><span>SEMrush</span></div>
-            <div class="tool-icon-box"><i class="fa-brands fa-wordpress" style="color: #21759b;"></i><span>WordPress</span></div>
-            <div class="tool-icon-box"><i class="fa-solid fa-palette" style="color: #00C4CC;"></i><span>Canva</span></div>
-            <div class="tool-icon-box"><i class="fa-solid fa-link" style="color: #FF8C00;"></i><span>Ahrefs</span></div>
-        </div>
-    </section>
-
-    <hr>
-
-    <section id="work">
-        <h2 class="section-header">Experience</h2>
-        
-        <div class="exp-card">
-            <div class="exp-main">
-                <p class="exp-sub">SB Websolutions</p>
-                <h3>SEO Analyst</h3>
-                <ul class="exp-list">
-                    <li>Conducted in-depth keyword research to optimize website content[cite: 10].</li>
-                    <li>Implemented on-page and off-page SEO strategies for organic traffic growth[cite: 11].</li>
-                    <li>Performed technical SEO audits to enhance site speed and mobile responsiveness[cite: 12].</li>
-                </ul>
-            </div>
-            <p class="exp-sub">June 2024 — Present [cite: 9]</p>
-        </div>
-
-        <div class="exp-card">
-            <div class="exp-main">
-                <p class="exp-sub">MAHATTA ART</p>
-                <h3>SEO Specialist</h3>
-                <ul class="exp-list">
-                    <li>Implemented schema markup, internal linking, and meta tag optimization[cite: 19, 20].</li>
-                    <li>Executed WhatsApp campaigns and email marketing for brand visibility[cite: 24].</li>
-                    <li>Collaborated with design and development teams for SEO best practices[cite: 23].</li>
-                </ul>
-            </div>
-            <p class="exp-sub">Oct 2023 [cite: 17]</p>
-        </div>
-    </section>
-
-    <hr>
-
-    <section id="contact" class="contact-footer">
-        <h2 class="section-header">Contact Me</h2>
-        <div class="contact-grid">
-            <div>
-                <p class="contact-label">Phone Number</p>
-                <p class="contact-value">+91 8826416152 [cite: 2]</p>
-            </div>
-            <div>
-                <p class="contact-label">Email Address</p>
-                <p class="contact-value">laxmidubey13031997@gmail.com [cite: 2]</p>
-            </div>
-        </div>
-        <p style="margin-top: 100px; opacity: 0.3; font-size: 0.8rem; text-transform: uppercase;">
-            © 2026 Laxmi Dubey • Professional SEO Analyst • Delhi, India.
-        </p>
-    </section>
-</div>
-
-</body>
-</html>
